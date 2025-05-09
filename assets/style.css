@@ -1,3 +1,48 @@
+/* 1. Стили для body (фон и курсор) */
+body {
+  margin: 0;
+  padding: 0;
+  /* Ваш GIF-фон */
+  background: url('d7f4c81124cc52624bd34184793b4ce1.gif') no-repeat center center fixed;
+  background-size: cover;
+  /* Кастомный курсор */
+  cursor: url('2cursor.cur'), auto;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 2. Контейнер с кнопками */
+.container {
+  text-align: center;
+  padding-top: 20vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Стили для кнопок */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* 4. Стили для падающих сердечек (ваш код) */
 .heart {
   position: absolute;
   color: #ff3366; /* Цвет сердечек */
