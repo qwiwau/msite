@@ -1,14 +1,22 @@
-for (let i = 0; i < 30; i++) createHeart();
-
 function createHeart() {
   const heart = document.createElement('div');
-  heart.innerHTML = '♡';  // Символ-сердечко
+  heart.innerHTML = '♡';
   heart.className = 'heart';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.top = -10 + 'px';
-  heart.style.opacity = Math.random() * 0.7 + 0.3;
-  heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
-  heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+  
+  // Оптимизированные случайные значения
+  heart.style.left = Math.random() * 95 + 'vw'; // 95vw вместо 100vw
+  heart.style.fontSize = (Math.random() * 15 + 10) + 'px'; // 10-25px
+  heart.style.opacity = Math.random() * 0.5 + 0.3; // 0.3-0.8
+  heart.style.animationDuration = (Math.random() * 2 + 3) + 's'; // 3-5s
+  
   document.body.appendChild(heart);
-  setTimeout(() => { heart.remove(); createHeart(); }, 5000);
+  
+  // Удаляем сердечко после анимации
+  heart.addEventListener('animationend', () => {
+    heart.remove();
+    createHeart(); // Создаём новое вместо рекурсии
+  });
 }
+
+// Создаём 30 сердечек сразу
+for (let i = 0; i < 30; i++) createHeart();
