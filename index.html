@@ -4,11 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой сайт</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 18px 35px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            width: 80%;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .btn:nth-child(2) {
+            background-color: #6b6bff;
+        }
+        .btn:nth-child(2):hover {
+            background-color: #5252ff;
+        }
+        .btn:nth-child(3) {
+            background-color: #6bff6b;
+        }
+        .btn:nth-child(3):hover {
+            background-color: #52ff52;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>выбирай</h1>
+        <h1>Выбирай</h1>
         <div class="buttons">
             <a href="page1.html" class="btn">Кнопка 1</a>
             <a href="page2.html" class="btn">Кнопка 2</a>
