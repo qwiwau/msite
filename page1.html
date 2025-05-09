@@ -9,24 +9,25 @@
         /* Дополнительные стили прямо в странице */
         body {
             background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
         }
         .content {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            color: #333; /* Тёмный текст */
+            color: #333;
         }
         h1 {
             font-size: 2.5rem;
-            color: #d63384; /* Розовый цвет заголовка */
+            color: #d63384;
             margin-bottom: 20px;
             text-align: center;
         }
         p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #212529; /* Ещё темнее текст */
+            color: #212529;
         }
         .featured-image {
             width: 100%;
@@ -40,10 +41,10 @@
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #ff66b2; /* Розовая кнопка */
+            background-color: #ff66b2;
             color: white;
             text-decoration: none;
-            border-radius: 25px; /* Более округлые углы */
+            border-radius: 25px;
             font-size: 1.1rem;
             transition: all 0.3s;
             border: none;
@@ -51,23 +52,13 @@
             margin-top: 20px;
         }
         .btn:hover {
-            background-color: #ff4da6; /* Темнее розовый при наведении */
+            background-color: #ff4da6;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .image-placeholder {
-            width: 100%;
-            max-width: 600px;
-            height: 400px;
-            background-color: #e9ecef;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            font-size: 1.2rem;
-            border: 2px dashed #adb5bd;
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -77,9 +68,8 @@
             <h1>Это Страница 1</h1>
             <p>котик в унитазе</p>
             
-            <!-- Замените этот блок на <img> когда картинка будет доступна -->
-            <img src="84401821fc42fbf45007568b3dd9d846.jpg" alt="котик в унитазе" class="featured-image">
-                [Здесь будет картинка 84401821fc42fbf45007568b3dd9d846.jpg]
+            <div class="image-container">
+                <img src="84401821fc42fbf45007568b3dd9d846.jpg" alt="котик в унитазе" class="featured-image" onerror="this.style.display='none'">
             </div>
             
             <p>Этот текст стал больше и приятнее для чтения. Вы можете добавить сюда любую информацию, которая будет интересна вашим посетителям. Не стесняйтесь экспериментировать с оформлением и содержанием!</p>
