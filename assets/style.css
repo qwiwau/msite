@@ -1,0 +1,12 @@
+.heart {
+  position: absolute;
+  color: #ff3366; /* Цвет сердечек */
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 0;
+  user-select: none;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
